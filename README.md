@@ -1,6 +1,7 @@
 # BMFont-XNA
 
 
+
 ## Load BMFont
 
 ```csharp
@@ -18,7 +19,7 @@ Font font = new Font(bmFont, content.Load<Texture2D>(bmFont.Pages[0].File.Replac
 ## Draw BMFont
 
 ```csharp
-
+string text = "Hello World";
 Vector2 positionChar = position;
 Rectangle sourceRectangle;
 FontCharData data;
