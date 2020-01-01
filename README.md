@@ -42,10 +42,10 @@ for (int i = 0; i < text.Length; i++)
     data = font.CharData(text[i]);
     
     sourceRectangle = new Rectangle(data.X, data.Y, data.Width, data.Height);
-    positionChar.Y = position.Y + data.OffSetY;
+    positionChar.Y = position.Y + data.OffSetY * scale.Y;
 
     Draw(font.Texture, positionChar, sourceRectangle, color, rotation, origin, scale, effects;
 
-    positionChar.X += data.AdvanceX - data.OffSetX;
+    positionChar.X += data.AdvanceX * scale.X - data.OffSetX * scale.X;
 }
 ```
